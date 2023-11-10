@@ -1,0 +1,32 @@
+<div id="<%= dom_id destiny %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= destiny.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Start date:</strong>
+    <%= destiny.start_date %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Finish date:</strong>
+    <%= destiny.finish_date %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Travel:</strong>
+    <%= destiny.travel_id %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Country:</strong>
+    <%= destiny.country_id %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this destiny", destiny, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this destiny", edit_destiny_path(destiny), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

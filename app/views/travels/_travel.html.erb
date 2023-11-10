@@ -1,0 +1,27 @@
+<div id="<%= dom_id travel %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= travel.title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Start date:</strong>
+    <%= travel.start_date %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Finish date:</strong>
+    <%= travel.finish_date %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">User:</strong>
+    <%= travel.user_id %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this travel", travel, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this travel", edit_travel_path(travel), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

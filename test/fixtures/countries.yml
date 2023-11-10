@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  alpha3_code: MyString
+  continent: one
+  language: one
+
+two:
+  name: MyString
+  alpha3_code: MyString
+  continent: two
+  language: two
