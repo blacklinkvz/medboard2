@@ -8,7 +8,7 @@ one:
   rut: MyString
   passport: MyString
   email: MyString
-  password: MyString
+  password_digest: MyString
   country: one
   bloodtype: one
   usertype: one
@@ -21,7 +21,7 @@ two:
   rut: MyString
   passport: MyString
   email: MyString
-  password: MyString
+  password_digest: MyString
   country: two
   bloodtype: two
   usertype: two

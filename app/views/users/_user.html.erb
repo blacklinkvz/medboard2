@@ -35,23 +35,23 @@
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Password:</strong>
-    <%= user.password %>
+    <strong class="block font-medium mb-1">Password digest:</strong>
+    <%= user.password_digest %>
   </p>
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Country:</strong>
-    <%= user.country_id %>
+    <%= user.country.name %>
   </p>
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Bloodtype:</strong>
-    <%= user.bloodtype_id %>
+    <%= user.bloodtype.name %>
   </p>
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Usertype:</strong>
-    <%= user.usertype_id %>
+    <%= user.usertype.name %>
   </p>
 
   <% if action_name != "show" %>

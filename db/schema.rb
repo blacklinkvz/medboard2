@@ -30,20 +30,12 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_10_221046) do
     t.index ["user_id"], name: "index_contacts_on_user_id"
   end
 
-  create_table "continents", charset: "utf8mb4", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "countries", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.string "alpha3_code"
-    t.bigint "continent_id", null: false
     t.bigint "language_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["continent_id"], name: "index_countries_on_continent_id"
     t.index ["language_id"], name: "index_countries_on_language_id"
   end
 
@@ -126,7 +118,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_10_221046) do
     t.string "rut"
     t.string "passport"
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.bigint "country_id", null: false
     t.bigint "bloodtype_id", null: false
     t.bigint "usertype_id", null: false
@@ -145,7 +137,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_10_221046) do
 
   add_foreign_key "contacts", "countries"
   add_foreign_key "contacts", "users"
-  add_foreign_key "countries", "continents"
   add_foreign_key "countries", "languages"
   add_foreign_key "destinies", "countries"
   add_foreign_key "destinies", "travels"

@@ -17,7 +17,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create user" do
     assert_difference("User.count") do
-      post users_url, params: { user: { bloodtype_id: @user.bloodtype_id, country_id: @user.country_id, email: @user.email, lastname: @user.lastname, name: @user.name, passport: @user.passport, password: @user.password, rut: @user.rut, s_lastname: @user.s_lastname, s_name: @user.s_name, usertype_id: @user.usertype_id } }
+      post users_url, params: { user: { bloodtype_id: @user.bloodtype_id, country_id: @user.country_id, email: @user.email, lastname: @user.lastname, name: @user.name, passport: @user.passport, password_digest: @user.password_digest, rut: @user.rut, s_lastname: @user.s_lastname, s_name: @user.s_name, usertype_id: @user.usertype_id } }
     end
 
     assert_redirected_to user_url(User.last)
@@ -34,7 +34,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update user" do
-    patch user_url(@user), params: { user: { bloodtype_id: @user.bloodtype_id, country_id: @user.country_id, email: @user.email, lastname: @user.lastname, name: @user.name, passport: @user.passport, password: @user.password, rut: @user.rut, s_lastname: @user.s_lastname, s_name: @user.s_name, usertype_id: @user.usertype_id } }
+    patch user_url(@user), params: { user: { bloodtype_id: @user.bloodtype_id, country_id: @user.country_id, email: @user.email, lastname: @user.lastname, name: @user.name, passport: @user.passport, password_digest: @user.password_digest, rut: @user.rut, s_lastname: @user.s_lastname, s_name: @user.s_name, usertype_id: @user.usertype_id } }
     assert_redirected_to user_url(@user)
   end
 

@@ -3,11 +3,9 @@
 one:
   name: MyString
   alpha3_code: MyString
-  continent: one
   language: one
 
 two:
   name: MyString
   alpha3_code: MyString
-  continent: two
   language: two

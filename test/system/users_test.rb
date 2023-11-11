@@ -20,7 +20,7 @@ class UsersTest < ApplicationSystemTestCase
     fill_in "Lastname", with: @user.lastname
     fill_in "Name", with: @user.name
     fill_in "Passport", with: @user.passport
-    fill_in "Password", with: @user.password
+    fill_in "Password digest", with: @user.password_digest
     fill_in "Rut", with: @user.rut
     fill_in "S lastname", with: @user.s_lastname
     fill_in "S name", with: @user.s_name
@@ -41,7 +41,7 @@ class UsersTest < ApplicationSystemTestCase
     fill_in "Lastname", with: @user.lastname
     fill_in "Name", with: @user.name
     fill_in "Passport", with: @user.passport
-    fill_in "Password", with: @user.password
+    fill_in "Password digest", with: @user.password_digest
     fill_in "Rut", with: @user.rut
     fill_in "S lastname", with: @user.s_lastname
     fill_in "S name", with: @user.s_name

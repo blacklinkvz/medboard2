@@ -3,7 +3,6 @@ class CreateCountries < ActiveRecord::Migration[7.1]
     create_table :countries do |t|
       t.string :name
       t.string :alpha3_code
-      t.references :continent, null: false, foreign_key: true
       t.references :language, null: false, foreign_key: true
 
       t.timestamps

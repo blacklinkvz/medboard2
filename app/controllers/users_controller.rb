@@ -13,15 +13,21 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    @bloodtypes = Bloodtype.all
+		@countries = Country.all
   end
 
   # GET /users/1/edit
   def edit
+    @bloodtypes = Bloodtype.all
+		@countries = Country.all
   end
 
   # POST /users or /users.json
   def create
     @user = User.new(user_params)
+    @bloodtypes = Bloodtype.all
+		@countries = Country.all
 
     respond_to do |format|
       if @user.save
@@ -36,6 +42,8 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1 or /users/1.json
   def update
+    @bloodtypes = Bloodtype.all
+		@countries = Country.all
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to user_url(@user), notice: "User was successfully updated." }
@@ -65,6 +73,7 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
+      params[:user][:usertype_id] ||= 1
       params.require(:user).permit(:name, :s_name, :lastname, :s_lastname, :rut, :passport, :email, :password, :country_id, :bloodtype_id, :usertype_id)
     end
 end
